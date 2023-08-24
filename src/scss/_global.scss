@@ -44,9 +44,13 @@ img {
 }
 
 .container {
-  max-width: 1260px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+i {
+  display: inline-block;
 }
 
 // vars
@@ -60,10 +64,13 @@ $background-yellow-dark: rgba(255, 232, 188, 1);
 $background-orange: rgba(255, 169, 0, 1);
 
 $border-yellow: rgba(255, 169, 0, 0.45);
-$border-gray: rgba(255, 255, 255, 1);
+$border-gray: rgba(225, 225, 225, 1);
 
 $btn-size: 1rem;
 // 
+label{
+  margin-bottom: 0;
+}
 
 //заголовок h1
 h1,
@@ -84,6 +91,8 @@ h2 {
 }
 
 .btn {
+  @include flex(inline-flex, center, center);
+
   padding: 11px;
   font-size: $btn-size;
   color: #fff;
@@ -92,11 +101,11 @@ h2 {
   border-color: unset;
   border-radius: 16px;
 
+  cursor: pointer;
+
   &__icon {
     width: 26px;
     height: 26px;
-
-    margin-right: 7px;
   }
 
   &-red {
@@ -125,33 +134,38 @@ h2 {
   border-radius: $card-border-radius;
   border: 1px solid $border-gray;
 
-  &__content{
+  &__content {
     padding: 0 19px 25px;
   }
-  &__chars{
+
+  &__chars {
     color: rgba(67, 67, 67, 1);
     display: flex;
     justify-content: space-between;
   }
-  &__title{
+
+  &__title {
     font-size: 1.33rem;
   }
-  &__price{
+
+  &__price {
     font-size: 1.6rem;
   }
-  &__oldprice{
+
+  &__oldprice {
     font-size: 0.93rem;
     color: $color-gray;
   }
+
   &__favourite {
     position: absolute;
     right: 18px;
     top: 17px;
-    &--active{
 
-    }
+    &--active {}
   }
-  &__discount{
+
+  &__discount {
     @include flex('none', 'center', 'center');
     width: 52px;
     height: 36px;
@@ -160,17 +174,19 @@ h2 {
     border-top-left-radius: $card-border-radius;
     border-bottom-right-radius: $card-border-radius;
   }
-  &-discount{
-    .card__discount{
+
+  &-discount {
+    .card__discount {
       display: flex;
     }
-    .card__price{
+
+    .card__price {
       color: $color-red;
     }
   }
 }
 
-.item-counter{
+.item-counter {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -183,7 +199,9 @@ h2 {
   padding: 0 6px;
 
   border-radius: 58px;
-  &__reduce, &__add{
+
+  &__reduce,
+  &__add {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,19 +209,117 @@ h2 {
     height: 29px;
 
     border-radius: 50%;
-    &--active{
+
+    &--active {
       background-color: $background-orange;
       color: #fff;
       cursor: pointer;
     }
   }
-  &__reduce{
 
-  }
-  &__add{
+  &__reduce {}
 
-  }
-  &__number{
-    
+  &__add {}
+
+  &__number {}
+}
+
+.header__catalog-btn.active .burger {
+  span {
+    transform: rotate(45deg);
+
+    &::before {
+      transform: rotate(0);
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
   }
 }
+
+//кнопка вкл/выкл меню
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: $color-red;
+  border-radius: 10px;
+  cursor: pointer;
+
+  >span,
+  >span::before,
+  >span::after {
+    display: block;
+    position: absolute;
+
+    width: 14px;
+    height: 2px;
+
+    background-color: #fff;
+    transition-duration: 0.25s;
+  }
+
+  >span {
+    &::before {
+      content: "";
+      transform: translateY(-6px);
+    }
+
+    &::after {
+      content: "";
+      transform: translateY(6px);
+    }
+  }
+}
+
+// search
+.search {
+  width: 317px;
+  position: relative;
+
+  &__bar {
+    width: 100%;
+    height: 48px;
+
+    border-radius: 16px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+
+    &:focus {
+      border: 1px solid #ccc;
+      transition: 0.35s ease;
+      color: #000;
+
+      &::-webkit-input-placeholder {
+        transition: opacity 0.45s ease;
+        opacity: 0;
+      }
+
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease;
+        opacity: 0;
+      }
+
+      &:-ms-placeholder {
+        transition: opacity 0.45s ease;
+        opacity: 0;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+  }
+}
+
+// 
