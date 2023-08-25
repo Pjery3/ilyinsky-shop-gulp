@@ -13,7 +13,7 @@ $(window).on("load", function () {
     $(this).hasClass('active') ? $(this).removeClass('active') : $(this).addClass('active');
     // 
   })
-  $('body').on('click', '.banner__close', function(e){
-    $(this).closest('.banner').remove();
+  $('body').on('click', '.banner-discount__close', function(e){
+    $(this).closest('.banner-discount').remove();
   })
 });

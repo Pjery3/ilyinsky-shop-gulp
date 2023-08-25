@@ -17,8 +17,12 @@
 </head>
 
 <body>
-  <div class="banner">
-    <img src="./images/banner.jpg" alt="banner">
+  <div class="banner" style="background-image: url(./images/banner.jpg);">
+    <div class="container">
+      <div class="banner__inner">
+        <img src="./images/banner-close.png" class="banner__close"></img>
+      </div>
+    </div>
   </div>
   <header class="header">
     <div class="container">
@@ -27,41 +31,66 @@
           <img src="./images/logo.png" alt="logo">
         </a>
         <div class="header__catalog-btn btn btn-red">
-          <i></i>
+          <span class="burger">
+            <span></span>
+          </span>
           Каталог
         </div>
-        <div class="header__search"></div>
-        <div class="header__delivery-method"></div>
-        <div class="header__favourites"></div>
-        <div class="header__profile"></div>
-        <div class="header__basket"></div>
+        <div class="header__search">
+          <label class="search">
+            <input class="search__bar" type="text" placeholder="Начать поиск">
+            <img class="search__icon" src="./images/svg/search.svg">
+          </label>
+        </div>
+        <div class="header__delivery-method">
+          <div class="delivery">
+            <div class="delivery-region">
+              <img src="./images/svg/compass.svg" alt="compass">
+              <span>МСК</span>
+            </div>
+            <div class="delivery-text">
+              <p>Выберите способ получения</p>
+              <p><b>Доставка или самовывоз</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="header__buttons">
+          <div class="header__favourites btn btn-gray mr-1">
+            <img src="./images/svg/heart.svg" alt="heart">
+          </div>
+          <div class="header__profile btn btn-gray mr-2">
+            <img src="./images/svg/profile.svg" alt="profile">
+          </div>
+          <div class="header__basket btn btn-red">
+            <img class="mr-2" src="./images/svg/basket.svg" alt="basket">
+            Корзина
+          </div>
+        </div>
       </div>
       <div class="header__bottom">
         <div class="header__categories">
-          <div class="header__category btn">
-            <i class="btn__icon">
-              <img src="./images/svg/apple.svg" alt="apple">
-            </i>
+          <div class="header__category btn btn-yellow">
+            <img class="btn__icon mr-2 mb-1" src="./images/svg/apple.svg" alt="apple">
             Супермаркет
           </div>
-          <div class="header__category btn">
-            <i class="btn__icon"></i>
+          <div class="header__category btn btn-yellow">
+            <img class="btn__icon mr-2 mb-1" src="./images/svg/pizza.svg" alt="pizza">
             Кулинария
           </div>
-          <div class="header__category btn">
-            <i class="btn__icon"></i>
+          <div class="header__category btn btn-yellow">
+            <img class="btn__icon mr-2 mb-1" src="./images/svg/pie.svg" alt="pie">
             Заморозка
           </div>
-          <div class="header__category btn">
-            <i class="btn__icon"></i>
+          <div class="header__category btn btn-yellow">
+            <img class="btn__icon mr-2 mb-1" src="./images/svg/meat.svg" alt="meat">
             Другое
           </div>
-          <div class="header__category btn">
-            <i class="btn__icon"></i>
+          <div class="header__category btn btn-yellow">
+            <img class="btn__icon mr-2 mb-1" src="./images/svg/fire.svg" alt="fire">
             Акции
           </div>
-          <div class="header__category btn">
-            <i class="btn__icon"></i>
+          <div class="header__category btn btn-yellow">
+            <img class="btn__icon mr-2 mb-1" src="./images/svg/lollipop.svg" alt="lollipop"> 
             Магазины
           </div>
         </div>
@@ -69,13 +98,18 @@
     </div>
   </header>
   <main class="main">
-    <div class="container">
-      <div class="item-counter">
+    <section>
+      <div class="container">
+        
+      </div>
+    </section>
+    <!-- <div class="container"> -->
+      <!-- <div class="item-counter">
         <span class="item-counter__reduce">-</span>
         <span class="item-counter__number">1</span>
         <span class="item-counter__add item-counter__add--active">+</span>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div> -->
   </main>
 </body>
 
