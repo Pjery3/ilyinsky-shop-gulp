@@ -1,3 +1,21 @@
+// vars
+$color-red: rgba(255, 0, 0, 1);
+$color-yellow: rgba(218, 144, 0, 1);
+$color-black: rgba(10, 10, 10, 1);
+$color-gray: rgba(67, 67, 67, 1);
+$color-green: rgba(62, 88, 40, 1);
+
+$background-yellow: rgba(255, 248, 235, 1);
+$background-yellow-dark: rgba(255, 232, 188, 1);
+$background-orange: rgba(255, 169, 0, 1);
+
+$border-yellow: rgba(255, 169, 0, 0.45);
+$border-gray: rgba(225, 225, 225, 1);
+
+$btn-size: 1rem;
+
+// 
+
 //у всех элементов при выделении будет синий цвет
 *,
 *::before,
@@ -49,26 +67,15 @@ img {
   padding: 0 30px;
 }
 
+.color-green {
+  color: $color-green !important;
+}
+
 i {
   display: inline-block;
 }
 
-// vars
-$color-red: rgba(255, 0, 0, 1);
-$color-yellow: rgba(218, 144, 0, 1);
-$color-black: rgba(10, 10, 10, 1);
-$color-gray: rgba(67, 67, 67, 1);
-
-$background-yellow: rgba(255, 248, 235, 1);
-$background-yellow-dark: rgba(255, 232, 188, 1);
-$background-orange: rgba(255, 169, 0, 1);
-
-$border-yellow: rgba(255, 169, 0, 0.45);
-$border-gray: rgba(225, 225, 225, 1);
-
-$btn-size: 1rem;
-// 
-label{
+label {
   margin-bottom: 0;
 }
 

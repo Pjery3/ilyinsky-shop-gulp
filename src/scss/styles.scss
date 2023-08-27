@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center center;
+
     &__inner {
         position: relative;
     }
@@ -24,6 +25,7 @@
 
 .header {
     margin-top: 20px;
+
     &__top {
         @include flex(flex, center, space-between);
         margin-bottom: 20px;
@@ -67,11 +69,13 @@
             height: 22px;
         }
     }
-    &__category{
+
+    &__category {
         color: #000;
         margin-right: 10px;
     }
-    .btn{
+
+    .btn {
         height: 48px;
     }
 }
@@ -106,5 +110,67 @@
         p {
             margin-bottom: 0;
         }
+    }
+}
+
+$top-banner-item-height: 460px;
+
+.top-banner {
+    .item {
+        height: calc($top-banner-item-height/2);
+        padding: 19px;
+    }
+
+    .slider__item,
+    .item {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        color: #fff;
+    }
+}
+
+.slider {
+    $slick-arrow-size: 48px;
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+        width: $slick-arrow-size;
+        height: $slick-arrow-size;
+        border-radius: 50%;
+        background-color: #FFF1D6;
+    }
+
+    .slick-prev {
+        left: calc($slick-arrow-size/2 * -1);
+
+        svg {
+            position: relative;
+            left: -2px;
+        }
+    }
+
+    .slick-next {
+        right: calc($slick-arrow-size/2 * -1);
+
+        svg {
+            position: relative;
+            right: -2px;
+        }
+    }
+
+    &__item {
+        height: $top-banner-item-height;
+        padding: 85px 50px;
     }
 }
