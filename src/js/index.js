@@ -11,6 +11,8 @@ $(window).on("load", function () {
                   </svg>
                 </button>`,
                 dots: true, 
+                infinite: false,
+                fade: true,
   });
 
   $('body').on('click', function (e) {

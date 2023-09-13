@@ -132,6 +132,10 @@ h2 {
   &-gray {
     border-color: $border-gray;
   }
+
+  &-rounded{
+    border-radius: 31px;
+  }
 }
 
 .card {
