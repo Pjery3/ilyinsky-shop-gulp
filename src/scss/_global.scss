@@ -95,6 +95,7 @@ h2 {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1;
+  margin-bottom: 0;
 }
 
 .btn {
@@ -109,6 +110,7 @@ h2 {
   border-radius: 16px;
 
   cursor: pointer;
+  transition: color .2s, background .2s;
 
   &__icon {
     width: 26px;
@@ -116,8 +118,20 @@ h2 {
   }
 
   &-red {
-    background-color: $color-red;
-    color: #fff;
+    &--border {
+      border-color: $color-red;
+      color: $color-red;
+
+      &:hover {
+        background-color: $color-red;
+        color: #fff;
+      }
+    }
+
+    &--bg {
+      background-color: $color-red;
+      color: #fff;
+    }
   }
 
   &-yellow {
@@ -133,7 +147,7 @@ h2 {
     border-color: $border-gray;
   }
 
-  &-rounded{
+  &-rounded {
     border-radius: 31px;
   }
 }
@@ -144,6 +158,10 @@ h2 {
 
   border-radius: $card-border-radius;
   border: 1px solid $border-gray;
+
+  &__img {
+    max-width: 304px;
+  }
 
   &__content {
     padding: 0 19px 25px;
@@ -159,28 +177,48 @@ h2 {
     font-size: 1.33rem;
   }
 
+  &__bottom {
+    @include flex(flex, center, space-between);
+  }
+
   &__price {
     font-size: 1.6rem;
   }
 
   &__oldprice {
+    display: none;
     font-size: 0.93rem;
     color: $color-gray;
+    text-decoration: line-through;
   }
 
   &__favourite {
     position: absolute;
     right: 18px;
     top: 17px;
+    
+    cursor: pointer;
+    path {
+      transition: fill .2s;
+    }
 
-    &--active {}
+    &:hover {
+      path {
+        fill: $color-red;
+      }
+    }
   }
 
   &__discount {
-    @include flex('none', 'center', 'center');
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include flex(none, center, center);
     width: 52px;
     height: 36px;
 
+    background-color: $color-red;
     color: #fff;
     border-top-left-radius: $card-border-radius;
     border-bottom-right-radius: $card-border-radius;
@@ -194,6 +232,20 @@ h2 {
     .card__price {
       color: $color-red;
     }
+
+    .card__oldprice {
+      display: block;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn {
+    border-radius: 60px;
+    padding: 9px 15px;
   }
 }
 
