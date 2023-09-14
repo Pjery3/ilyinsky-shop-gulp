@@ -116,6 +116,21 @@
 $top-banner-item-height: 460px;
 
 .top-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    .swiper{
+        overflow: unset;
+        &-container{
+            grid-column: span 2;
+            grid-row: span 2;
+            // grid-template-rows: repeat(2, 1fr);
+        }
+        &-wrapper{
+            box-sizing: border-box;
+        }
+    }
     .slider__item{
         &-title{
             font-size: 50px;
@@ -128,7 +143,7 @@ $top-banner-item-height: 460px;
         }
     }
     .item {
-        height: calc($top-banner-item-height/2);
+        // height: calc($top-banner-item-height/2);
         padding: 19px;
         &-title{
             font-size: 28px;
@@ -145,8 +160,9 @@ $top-banner-item-height: 460px;
 
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
 
+        border-radius: 30px;
         color: #fff;
     }
 }
@@ -155,8 +171,8 @@ $top-banner-item-height: 460px;
     $slick-arrow-size: 48px;
     $slider-item-padding-x: 50px;
 
-    .slick-prev,
-    .slick-next {
+    .swiper-prev,
+    .swiper-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -168,7 +184,7 @@ $top-banner-item-height: 460px;
         background-color: #FFF1D6;
     }
 
-    .slick-prev {
+    .swiper-prev {
         left: calc($slick-arrow-size/2 * -1);
 
         svg {
@@ -177,7 +193,7 @@ $top-banner-item-height: 460px;
         }
     }
 
-    .slick-next {
+    .swiper-next {
         right: calc($slick-arrow-size/2 * -1);
 
         svg {
@@ -189,9 +205,11 @@ $top-banner-item-height: 460px;
     &__item {
         height: $top-banner-item-height;
         padding: 85px $slider-item-padding-x;
+
+        cursor: grab;
     }
 
-    .slick-dots {
+    .swiper-dots {
         position: absolute;
         bottom: 15px;
         left: $slider-item-padding-x;
@@ -221,8 +239,8 @@ $top-banner-item-height: 460px;
             }
         }
     }
-    .slick-arrow{
-        &.slick-disabled{
+    .swiper-arrow{
+        &.swiper-button-disabled{
             background-color: #dedede;
         }
     }

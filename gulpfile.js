@@ -37,6 +37,7 @@ function images() {
 
 function scripts() {
     return src([
+        'node_modules/swiper/swiper-bundle.min.js',
         'src/js/index.js',
     ])
         .pipe(concat('index.min.js'))
@@ -48,6 +49,8 @@ function scripts() {
 function styles() {
     return src([
         'src/css/bootstrap.min.css',
+        'node_modules/swiper/swiper-bundle.min.css',
+        'node_modules/swiper/modules/effect-fade.min.css',
         'src/scss/styles.scss',
     ])
         .pipe(scss({ outputStyle: 'compressed' }))
