@@ -13,6 +13,20 @@ $background-orange: rgba(255, 169, 0, 1);
 $border-yellow: rgba(255, 169, 0, 0.45);
 $border-gray: rgba(225, 225, 225, 1);
 
+// category-items
+$color-blue: rgba(56, 60, 92, 1);
+$color-brown: rgba(119, 70, 49, 1);
+$color-cyan--dark: rgba(39, 68, 71, 1);
+
+$background-green--light: rgba(247, 255, 229, 1);
+$background-brown--light: rgba(255, 248, 235, 1);
+$background-cyan: rgba(235, 237, 255, 1);
+
+$border-green: rgba(204, 224, 160, 1);
+$border-brown: rgba(255, 231, 185, 1);
+$border-cyan: rgba(192, 197, 242, 1);
+// 
+
 $btn-size: 1rem;
 
 // 
@@ -287,6 +301,38 @@ h2 {
     .item-counter__add {
       background-color: #ccc;
     }
+  }
+}
+
+// category-item
+.category-item {
+  padding: 35px;
+  background-repeat: no-repeat;
+  background-position: 95% 95%;
+  background-size: auto;
+
+  border-radius: 58px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: unset;
+
+  height: 304px;
+  width: 304px;
+
+  &--green {
+    color: $color-blue;
+    background-color: $background-green--light;
+    border-color: $border-green;
+  }
+  &--brown{
+    color: $color-brown;
+    background-color: $background-brown--light;
+    border-color: $border-brown;
+  }
+  &--cyan{
+    color: $color-cyan--dark;
+    background-color: $background-cyan;
+    border-color: $border-cyan;
   }
 }
 
