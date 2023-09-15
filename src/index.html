@@ -28,7 +28,7 @@
         <a class="header__logo" href="#">
           <img src="./images/logo.png" alt="logo">
         </a>
-        <div class="header__catalog-btn btn btn-red">
+        <div class="header__catalog-btn btn btn-red--bg">
           <span class="burger">
             <span></span>
           </span>
@@ -59,7 +59,7 @@
           <div class="header__profile btn btn-gray mr-2">
             <img src="./images/svg/profile.svg" alt="profile">
           </div>
-          <div class="header__basket btn btn-red">
+          <div class="header__basket btn btn-red--bg">
             <img class="mr-2" src="./images/svg/basket.svg" alt="basket">
             Корзина
           </div>
@@ -172,46 +172,52 @@
       </div>
     </section>
 
-    <section>
+    <section class="discount-swiper">
       <div class="container">
         <div class="row align-items-center swiper-top">
           <h2 class="col-auto">СКИДКИ</h2>
-          <a href="" class="col-auto btn btn-orange">
+          <a href="#" class="col-auto btn btn-yellow btn-view-all">
             Смотреть все
-            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
               <path
                 d="M1.69322 0.289794L6.67075 5.26732C7.05701 5.65559 7.05701 6.28273 6.67075 6.671L1.69322 11.6485C1.32092 11.9681 0.770393 11.9681 0.398088 11.6485C-0.0190492 11.2911 -0.0677967 10.662 0.289598 10.2449L4.56027 5.97413L0.289548 1.69347C-0.0967141 1.3052 -0.0967141 0.678064 0.289548 0.289794C0.677818 -0.0964679 1.305 -0.0964679 1.69322 0.289794Z"
                 fill="#DA9000" />
             </svg>
           </a>
           <div class="col d-flex justify-content-end">
-            <div class="item-counter">
-              <span class="swiper-arrow item-counter__reduce">
+            <div class="item-counter swiper-arrows">
+              <span class="item-counter__reduce swiper-prev">
                 <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
-                  <path d="M5.30678 0.289794L0.329247 5.26732C-0.0570147 5.65559 -0.0570147 6.28273 0.329247 6.671L5.30678 11.6485C5.67908 11.9681 6.22961 11.9681 6.60191 11.6485C7.01905 11.2911 7.0678 10.662 6.7104 10.2449L2.43973 5.97413L6.71045 1.69347C7.09671 1.3052 7.09671 0.678064 6.71045 0.289794C6.32218 -0.0964679 5.695 -0.0964679 5.30678 0.289794Z" fill="#FFA900"/>
-                  </svg>
+                  <path
+                    d="M5.30678 0.289794L0.329247 5.26732C-0.0570147 5.65559 -0.0570147 6.28273 0.329247 6.671L5.30678 11.6485C5.67908 11.9681 6.22961 11.9681 6.60191 11.6485C7.01905 11.2911 7.0678 10.662 6.7104 10.2449L2.43973 5.97413L6.71045 1.69347C7.09671 1.3052 7.09671 0.678064 6.71045 0.289794C6.32218 -0.0964679 5.695 -0.0964679 5.30678 0.289794Z"
+                    fill="#FFA900" />
+                </svg>
               </span>
-              <span class="swiper-arrow item-counter__add item-counter__add--active">
+              <span class="item-counter__add swiper-next">
                 <svg xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
-                  <path d="M1.69322 0.289794L6.67075 5.26732C7.05701 5.65559 7.05701 6.28273 6.67075 6.671L1.69322 11.6485C1.32092 11.9681 0.770393 11.9681 0.398088 11.6485C-0.0190492 11.2911 -0.0677967 10.662 0.289598 10.2449L4.56027 5.97413L0.289548 1.69347C-0.0967141 1.3052 -0.0967141 0.678064 0.289548 0.289794C0.677818 -0.0964679 1.305 -0.0964679 1.69322 0.289794Z" fill="white"/>
-                  </svg>
+                  <path
+                    d="M1.69322 0.289794L6.67075 5.26732C7.05701 5.65559 7.05701 6.28273 6.67075 6.671L1.69322 11.6485C1.32092 11.9681 0.770393 11.9681 0.398088 11.6485C-0.0190492 11.2911 -0.0677967 10.662 0.289598 10.2449L4.56027 5.97413L0.289548 1.69347C-0.0967141 1.3052 -0.0967141 0.678064 0.289548 0.289794C0.677818 -0.0964679 1.305 -0.0964679 1.69322 0.289794Z"
+                    fill="#FFA900" />
+                </svg>
               </span>
             </div>
           </div>
         </div>
 
-        <div class="discount-swiper swiper">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card card-discount">
                 <span class="card__favourite">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                    <path d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z" fill="#DADADA"/>
-                    </svg>
+                    <path
+                      d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z"
+                      fill="#DADADA" />
+                  </svg>
                 </span>
                 <span class="card__discount">%</span>
-                <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                 <div class="card__content">
+                  <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                   <div class="card__chars">
                     <span>В наличии 2 шт</span>
                     <span>99,90 грн</span>
@@ -219,102 +225,147 @@
                   <h3 class="card__title">
                     Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
                   </h3>
-                  <div class="card__bottom">
-                    <div class="card__prices">
-                      <span class="card__price">99,90 грн</span>
-                      <span class="card__oldprice">129,00 грн</span>
-                    </div>
-                    <div class="card__btn">
-                      <button class="btn btn-red--border" type="button">В корзину</button>
-                    </div>
+                  
                 </div>
+                <div class="card__bottom">
+                  <div class="card__prices">
+                    <span class="card__price">99,90 грн</span>
+                    <span class="card__oldprice">129,00 грн</span>
+                  </div>
+                  <div class="card__btn">
+                    <button class="btn btn-red--border" type="button">В корзину</button>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card card-discount">
+              <div class="card card--favourite" data-item-stock="2">
                 <span class="card__favourite">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                    <path d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z" fill="#DADADA"/>
-                    </svg>
+                    <path
+                      d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z"
+                      fill="#DADADA" />
+                  </svg>
                 </span>
                 <span class="card__discount">%</span>
-                <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                 <div class="card__content">
+                  <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                   <div class="card__chars">
                     <span>В наличии 2 шт</span>
-                    <span>99,90 грн</span>
+                    <span>79,90 грн</span>
                   </div>
                   <h3 class="card__title">
                     Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
                   </h3>
-                  <div class="card__bottom">
-                    <div class="card__prices">
-                      <span class="card__price">99,90 грн</span>
-                      <span class="card__oldprice">129,00 грн</span>
-                    </div>
-                    <div class="card__btn">
-                      <button class="btn btn-red--border" type="button">В корзину</button>
-                    </div>
+                  
                 </div>
+                <div class="card__bottom">
+                  <div class="card__prices">
+                    <span class="card__price">79,90 грн</span>
+                    <span class="card__oldprice">129,00 грн</span>
+                  </div>
+                  <div class="item-counter" data-item-counter="1">
+                    <span class="item-counter__reduce">-</span>
+                    <span class="item-counter__number">1</span>
+                    <span class="item-counter__add item-counter__add--active">+</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card card--outstock">
                 <span class="card__favourite">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                    <path d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z" fill="#DADADA"/>
-                    </svg>
+                    <path
+                      d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z"
+                      fill="#DADADA" />
+                  </svg>
                 </span>
                 <span class="card__discount">%</span>
-                <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                 <div class="card__content">
+                  <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                   <div class="card__chars">
-                    <span>В наличии 2 шт</span>
+                    <span class="card__chars-count">Появится завтра</span>
                     <span>99,90 грн</span>
                   </div>
                   <h3 class="card__title">
                     Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
                   </h3>
-                  <div class="card__bottom">
-                    <div class="card__prices">
-                      <span class="card__price">99,90 грн</span>
-                      <span class="card__oldprice">129,00 грн</span>
-                    </div>
-                    <div class="card__btn">
-                      <button class="btn btn-red--border" type="button">В корзину</button>
-                    </div>
                 </div>
+                <div class="card__bottom">
+                  <div class="card__prices">
+                    <span class="card__price">99,90 грн</span>
+                    <span class="card__oldprice">129,00 грн</span>
+                  </div>
+                  <div class="card__btn">
+                    <button class="btn btn-red--border" type="button">На завтра</button>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card card-discount">
+              <div class="card" data-item-stock="2">
                 <span class="card__favourite">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
-                    <path d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z" fill="#DADADA"/>
-                    </svg>
+                    <path
+                      d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z"
+                      fill="#DADADA" />
+                  </svg>
                 </span>
                 <span class="card__discount">%</span>
-                <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                 <div class="card__content">
+                  <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
                   <div class="card__chars">
                     <span>В наличии 2 шт</span>
-                    <span>99,90 грн</span>
+                    <span>79,90 грн</span>
                   </div>
                   <h3 class="card__title">
                     Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
                   </h3>
-                  <div class="card__bottom">
-                    <div class="card__prices">
-                      <span class="card__price">99,90 грн</span>
-                      <span class="card__oldprice">129,00 грн</span>
-                    </div>
-                    <div class="card__btn">
-                      <button class="btn btn-red--border" type="button">В корзину</button>
-                    </div>
                 </div>
+                <div class="card__bottom">
+                  <div class="card__prices">
+                    <span class="card__price">79,90 грн</span>
+                    <span class="card__oldprice">129,00 грн</span>
+                  </div>
+                  <div class="item-counter" data-item-counter="1">
+                    <span class="item-counter__reduce">-</span>
+                    <span class="item-counter__number">1</span>
+                    <span class="item-counter__add item-counter__add--active">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card" data-item-stock="2">
+                <span class="card__favourite">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                    <path
+                      d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z"
+                      fill="#DADADA" />
+                  </svg>
+                </span>
+                <span class="card__discount">%</span>
+                <div class="card__content">
+                  <img src="./images/static/discount-block/granola.png" alt="" class="card__img">
+                  <div class="card__chars">
+                    <span>В наличии 2 шт</span>
+                    <span>79,90 грн</span>
+                  </div>
+                  <h3 class="card__title">
+                    Гранола Мюсли Bionova ягодные запечённые хрустящие, 400г
+                  </h3>
+                </div>
+                <div class="card__bottom">
+                  <div class="card__prices">
+                    <span class="card__price">79,90 грн</span>
+                    <span class="card__oldprice">129,00 грн</span>
+                  </div>
+                  <div class="item-counter" data-item-counter="1">
+                    <span class="item-counter__reduce">-</span>
+                    <span class="item-counter__number">1</span>
+                    <span class="item-counter__add item-counter__add--active">+</span>
+                  </div>
                 </div>
               </div>
             </div>

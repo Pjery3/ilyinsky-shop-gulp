@@ -4,6 +4,7 @@ $color-yellow: rgba(218, 144, 0, 1);
 $color-black: rgba(10, 10, 10, 1);
 $color-gray: rgba(67, 67, 67, 1);
 $color-green: rgba(62, 88, 40, 1);
+$color-peach--dark: rgba(191, 115, 115, 1);
 
 $background-yellow: rgba(255, 248, 235, 1);
 $background-yellow-dark: rgba(255, 232, 188, 1);
@@ -150,39 +151,72 @@ h2 {
   &-rounded {
     border-radius: 31px;
   }
+
+  &-view-all {
+    color: $color-yellow;
+
+    .icon {
+      margin-left: 10px;
+    }
+  }
 }
 
 .card {
   $card-border-radius: 20px;
+  $card-content-padding: 0 19px 15px;
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   border-radius: $card-border-radius;
   border: 1px solid $border-gray;
+
+  &--favourite {
+    .card__favourite {
+      path {
+        fill: $color-red;
+      }
+    }
+  }
+
+  &--outstock {
+    .card__chars-count {
+      color: $color-peach--dark;
+    }
+  }
 
   &__img {
     max-width: 304px;
   }
 
   &__content {
-    padding: 0 19px 25px;
+    padding: $card-content-padding;
   }
 
   &__chars {
-    color: rgba(67, 67, 67, 1);
     display: flex;
     justify-content: space-between;
+
+    color: rgba(67, 67, 67, 1);
+    margin-bottom: 5px;
   }
 
   &__title {
     font-size: 1.33rem;
+    margin-bottom: 0;
   }
 
   &__bottom {
-    @include flex(flex, center, space-between);
+    @include flex(flex, start, space-between);
+    height: 50px;
+    padding: $card-content-padding;
   }
 
   &__price {
     font-size: 1.6rem;
+    line-height: 1;
   }
 
   &__oldprice {
@@ -196,8 +230,9 @@ h2 {
     position: absolute;
     right: 18px;
     top: 17px;
-    
+
     cursor: pointer;
+
     path {
       transition: fill .2s;
     }
@@ -247,8 +282,15 @@ h2 {
     border-radius: 60px;
     padding: 9px 15px;
   }
+
+  &.over-quantity {
+    .item-counter__add {
+      background-color: #ccc;
+    }
+  }
 }
 
+//счетчик товаров
 .item-counter {
   display: inline-flex;
   align-items: center;
@@ -272,11 +314,11 @@ h2 {
     height: 29px;
 
     border-radius: 50%;
+    cursor: pointer;
 
     &--active {
       background-color: $background-orange;
       color: #fff;
-      cursor: pointer;
     }
   }
 
@@ -285,7 +327,24 @@ h2 {
   &__add {}
 
   &__number {}
+
+  &.swiper-arrows {
+    width: 80px;
+
+    .item-counter__reduce,
+    .item-counter__add {
+      &:hover {
+        background-color: $background-orange;
+
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
 }
+
+// 
 
 .header__catalog-btn.active .burger {
   span {
@@ -338,6 +397,7 @@ h2 {
   }
 }
 
+// 
 // search
 .search {
   width: 317px;
