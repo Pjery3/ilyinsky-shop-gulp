@@ -5,6 +5,7 @@ $color-black: rgba(10, 10, 10, 1);
 $color-gray: rgba(67, 67, 67, 1);
 $color-green: rgba(62, 88, 40, 1);
 $color-peach--dark: rgba(191, 115, 115, 1);
+$color-brown--dark: rgba(46, 5, 5, 1);
 
 $background-yellow: rgba(255, 248, 235, 1);
 $background-yellow-dark: rgba(255, 232, 188, 1);
@@ -16,15 +17,24 @@ $border-gray: rgba(225, 225, 225, 1);
 // category-items
 $color-blue: rgba(56, 60, 92, 1);
 $color-brown: rgba(119, 70, 49, 1);
-$color-cyan--dark: rgba(39, 68, 71, 1);
+$color-purple: rgba(56, 60, 92, 1);
+$color-cyan: rgba(39, 68, 71, 1);
+
 
 $background-green--light: rgba(247, 255, 229, 1);
 $background-brown--light: rgba(255, 248, 235, 1);
-$background-cyan: rgba(235, 237, 255, 1);
+$background-purple: rgba(235, 237, 255, 1);
+$background-cyan: rgba(235, 253, 255, 1);
+$background-crimson: rgba(205, 90, 126, 1);
+$background-red: rgba(255, 89, 77, 1);
+$background-peach: rgba(255, 166, 138, 1);
+$background-category-yellow: rgba(255, 196, 37, 1);
+
 
 $border-green: rgba(204, 224, 160, 1);
 $border-brown: rgba(255, 231, 185, 1);
-$border-cyan: rgba(192, 197, 242, 1);
+$border-purple: rgba(192, 197, 242, 1);
+$border-cyan: rgba(163, 208, 214, 1);
 // 
 
 $btn-size: 1rem;
@@ -81,9 +91,11 @@ img {
   margin: 0 auto;
   padding: 0 30px;
 }
-.mb-6{
+
+.mb-6 {
   margin-bottom: 5rem;
 }
+
 .color-green {
   color: $color-green !important;
 }
@@ -123,7 +135,7 @@ h2 {
   color: #fff;
   border-width: 1px;
   border-style: solid;
-  border-color: unset;
+  border-color: transparent;
   border-radius: 16px;
 
   cursor: pointer;
@@ -164,24 +176,39 @@ h2 {
     border-color: $border-gray;
   }
 
+  &-white {
+    &--border {
+      border-color: #fff;
+    }
+
+    &--bg {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
   &-rounded {
     border-radius: 31px;
   }
-
+  &-wide{
+    padding: 13px 32px;
+  }
   &-view-all {
     color: $color-yellow;
     font-weight: 500;
     padding: 10px 20px;
 
-    &:hover{
+    &:hover {
       background-color: $background-orange;
       color: #fff;
-      .icon{
-        path{
+
+      .icon {
+        path {
           fill: #fff;
         }
       }
     }
+
     .icon {
       margin-left: 10px;
     }
@@ -335,29 +362,70 @@ h2 {
 
   transition: border .2s;
 
+  &--tall {
+    border-radius: 30px;
+    height: 449px;
+    width: 310px;
+    padding: 30px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.73rem;
+  }
+
   &--green {
     color: $color-blue;
     background-color: $background-green--light;
     border-color: $border-green;
-    &:hover{
+
+    &:hover {
       border-color: $color-green
     }
   }
-  &--brown{
+
+  &--brown {
     color: $color-brown;
     background-color: $background-brown--light;
     border-color: $border-brown;
-    &:hover{
+
+    &:hover {
       border-color: $background-orange;
     }
   }
-  &--cyan{
-    color: $color-cyan--dark;
+
+  &--purple {
+    color: $color-purple;
+    background-color: $background-purple;
+    border-color: $border-purple;
+
+    &:hover {
+      border-color: $color-purple;
+    }
+  }
+
+  &--cyan {
+    color: $color-cyan;
     background-color: $background-cyan;
     border-color: $border-cyan;
-    &:hover{
-      border-color: $color-blue;
+
+    &:hover {
+      border-color: $color-cyan;
     }
+  }
+
+  &--crimson {
+    background-color: $background-crimson;
+  }
+
+  &--red {
+    background-color: $background-red;
+  }
+
+  &--peach {
+    background-color: $background-peach;
+  }
+
+  &--yellow {
+    background-color: $background-category-yellow;
   }
 }
 

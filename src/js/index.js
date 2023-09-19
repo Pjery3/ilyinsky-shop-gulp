@@ -96,6 +96,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //   el: '.swiper-scrollbar',
     // },
   });
+  const swiper3 = new Swiper('.promo-section .swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // spaceBetween: 25,
+    slidesPerView: 4,
+    slidesPerGroup: 1,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.promo-section .swiper-next',
+      prevEl: '.promo-section .swiper-prev',
+    },
+  });
 
   let body = document.querySelector('body');
   body.addEventListener('click', function (e) {
