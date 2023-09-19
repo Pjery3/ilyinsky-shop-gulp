@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 15px;
   color: #000;
 }
@@ -81,7 +81,9 @@ img {
   margin: 0 auto;
   padding: 0 30px;
 }
-
+.mb-6{
+  margin-bottom: 5rem;
+}
 .color-green {
   color: $color-green !important;
 }
@@ -168,7 +170,16 @@ h2 {
 
   &-view-all {
     color: $color-yellow;
-
+    padding: 10px 20px;
+    &:hover{
+      background-color: $background-orange;
+      color: #fff;
+      .icon{
+        path{
+          fill: #fff;
+        }
+      }
+    }
     .icon {
       margin-left: 10px;
     }
@@ -308,7 +319,7 @@ h2 {
 .category-item {
   padding: 35px;
   background-repeat: no-repeat;
-  background-position: 95% 95%;
+  background-position: 95% 100%;
   background-size: auto;
 
   border-radius: 58px;
@@ -316,6 +327,7 @@ h2 {
   border-width: 1px;
   border-color: unset;
 
+  display: block;
   height: 304px;
   width: 304px;
 
