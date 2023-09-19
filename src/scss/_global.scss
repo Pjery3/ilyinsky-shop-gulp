@@ -170,7 +170,9 @@ h2 {
 
   &-view-all {
     color: $color-yellow;
+    font-weight: 500;
     padding: 10px 20px;
+
     &:hover{
       background-color: $background-orange;
       color: #fff;
@@ -331,20 +333,31 @@ h2 {
   height: 304px;
   width: 304px;
 
+  transition: border .2s;
+
   &--green {
     color: $color-blue;
     background-color: $background-green--light;
     border-color: $border-green;
+    &:hover{
+      border-color: $color-green
+    }
   }
   &--brown{
     color: $color-brown;
     background-color: $background-brown--light;
     border-color: $border-brown;
+    &:hover{
+      border-color: $background-orange;
+    }
   }
   &--cyan{
     color: $color-cyan--dark;
     background-color: $background-cyan;
     border-color: $border-cyan;
+    &:hover{
+      border-color: $color-blue;
+    }
   }
 }
 
