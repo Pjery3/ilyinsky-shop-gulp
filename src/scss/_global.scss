@@ -96,6 +96,9 @@ img {
 .mb-6 {
   margin-bottom: 5rem;
 }
+.z-5{
+  z-index: 5;
+}
 
 .color-green {
   color: $color-green !important;
@@ -242,9 +245,11 @@ h2 {
     }
   }
 
-  &__img {
-    max-width: 304px;
-  }
+  // &__img {
+  //   img{
+  //     max-width: 304px;
+  //   }
+  // }
 
   &__content {
     padding: $card-content-padding;
@@ -265,10 +270,12 @@ h2 {
 
   &__bottom {
     @include flex(flex, start, space-between);
-    height: 50px;
+    min-height: 60px;
     padding: $card-content-padding;
   }
-
+  &__prices{
+    margin-right: 10px;
+  }
   &__price {
     font-size: 1.6rem;
     line-height: 1;
@@ -359,18 +366,19 @@ h2 {
 
   display: block;
   height: 304px;
-  width: 304px;
+  // width: 100%;
 
   transition: border .2s;
 
   &--tall {
     border-radius: 30px;
     height: 449px;
-    width: 310px;
+    // width: 310px;
     padding: 30px;
     color: #fff;
     font-weight: 700;
     font-size: 1.73rem;
+    margin: 0 auto;
   }
 
   &--green {
@@ -557,7 +565,7 @@ h2 {
 
 // search
 .search {
-  width: 317px;
+  width: 100%;
   position: relative;
 
   &__bar {

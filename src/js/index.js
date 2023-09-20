@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
     },
-
+    
     // And if we need scrollbar
     // scrollbar: {
     //   el: '.swiper-scrollbar',
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     direction: 'horizontal',
     loop: false,
     spaceBetween: 25,
-    slidesPerView: 4,
+    slidesPerView: 1,
     slidesPerGroup: 1,
 
     // If we need pagination
@@ -90,7 +90,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
       nextEl: '.discount-swiper .swiper-next',
       prevEl: '.discount-swiper .swiper-prev',
     },
-
+    breakpoints: {
+      // when window width is >= 320px
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
     // And if we need scrollbar
     // scrollbar: {
     //   el: '.swiper-scrollbar',
@@ -101,13 +117,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     direction: 'horizontal',
     loop: false,
     // spaceBetween: 25,
-    slidesPerView: 4,
+    slidesPerView: 1,
     slidesPerGroup: 1,
+    // centeredSlides: true,
 
     // Navigation arrows
     navigation: {
       nextEl: '.promo-section .swiper-next',
       prevEl: '.promo-section .swiper-prev',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      576: {
+        slidesPerView: 2,
+        // spaceBetween: 20
+      },
+      // when window width is >= 480px
+      992: {
+        slidesPerView: 3,
+        // spaceBetween: 30
+      },
+      // when window width is >= 640px
+      1300: {
+        slidesPerView: 4,
+        // spaceBetween: 40
+      }
     },
   });
 

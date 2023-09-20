@@ -25,23 +25,28 @@
   <header class="header">
     <div class="container">
       <div class="header__top">
+        <div class="header__catalog-btn header__catalog-btn--mobile d-block d-md-none">
+          <span class="burger">
+            <span></span>
+          </span>
+        </div>
         <a class="header__logo" href="#">
           <img src="./images/logo.png" alt="logo">
         </a>
-        <div class="header__catalog-btn btn btn-red--bg">
+        <div class="header__catalog-btn btn btn-red--bg d-none d-md-flex">
           <span class="burger">
             <span></span>
           </span>
           Каталог
         </div>
-        <div class="header__search">
+        <div class="header__search d-none d-md-block">
           <label class="search">
             <input class="search__bar" type="text" placeholder="Начать поиск">
             <img class="search__icon" src="./images/svg/search.svg">
           </label>
         </div>
-        <div class="header__delivery-method">
-          <div class="delivery-select">
+        <div class="header__buttons">
+          <div class="delivery-select mr-2 mr-md-3">
             <div class="delivery-select__region">
               <img src="./images/svg/compass.svg" alt="compass">
               <span>МСК</span>
@@ -51,17 +56,24 @@
               <p><b>Доставка или самовывоз</b></p>
             </div>
           </div>
-        </div>
-        <div class="header__buttons">
-          <div class="header__favourites btn btn-gray mr-1">
+          <div class="header__search-mobile d-inline-flex d-md-none mr-2">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.206 10.8782C12.2208 10.8913 12.2352 10.9049 12.2494 10.9191L15.1998 13.8695C15.5833 14.2531 15.5778 14.8694 15.1875 15.246C14.7971 15.6227 14.1697 15.6171 13.7862 15.2335L10.8358 12.2831C10.8307 12.2781 10.8258 12.273 10.8209 12.2679C9.77169 13.037 8.47721 13.4911 7.07667 13.4911C3.57519 13.4911 0.736687 10.6526 0.736687 7.15111C0.736687 3.64964 3.57519 0.811133 7.07667 0.811133C10.5781 0.811133 13.4166 3.64964 13.4166 7.15111C13.4166 8.54405 12.9674 9.83207 12.206 10.8782ZM2.40064 7.15111C2.40064 4.56862 4.49417 2.47509 7.07667 2.47509C9.65916 2.47509 11.7527 4.56862 11.7527 7.15111C11.7527 9.73361 9.65916 11.8271 7.07667 11.8271C4.49417 11.8271 2.40064 9.73361 2.40064 7.15111Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class="header__favourites d-none d-md-inline-flex btn btn-gray mr-1">
             <img src="./images/svg/heart.svg" alt="heart">
           </div>
-          <div class="header__profile btn btn-gray mr-2">
+          <div class="header__profile d-none d-md-inline-flex btn btn-gray mr-2">
             <img src="./images/svg/profile.svg" alt="profile">
           </div>
           <div class="header__basket btn btn-red--bg">
-            <img class="mr-2" src="./images/svg/basket.svg" alt="basket">
-            Корзина
+            <img class="mb-0 mr-lg-2" src="./images/svg/basket.svg" alt="basket">
+            <span class="d-none d-lg-block">Корзина</span>
           </div>
         </div>
       </div>
@@ -175,7 +187,7 @@
     <section class="discount-swiper mb-6">
       <div class="container">
         <div class="row align-items-center swiper-top mb-4">
-          <h2 class="col-auto">СКИДКИ</h2>
+          <h2 class="col-12 col-sm-auto mb-3 mb-sm-0">СКИДКИ</h2>
           <a href="#" class="col-auto btn btn-yellow btn-view-all">
             Смотреть все
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
@@ -377,7 +389,7 @@
     <section class="mb-6">
       <div class="container">
         <div class="row align-items-center mb-4">
-          <div class="col-auto">
+          <div class="col-auto mb-3 mb-sm-0">
             <h2>СУПЕРМАРКЕТ</h2>
           </div>
           <div class="col-auto">
@@ -393,49 +405,49 @@
         </div>
 
         <div class="row">
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/water.png);">
               <h3 class="category-item__title">Вода<br /> и напитки</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/milk.png);">
               <h3 class="category-item__title">Молоко, масло<br /> и яйца</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/dried-fruits.png);">
               <h3 class="category-item__title">Снэки <br />и сухофрукты</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/coffee.png);">
               <h3 class="category-item__title">Кофе, чай<br /> и сладости</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/cereal.png);">
               <h3 class="category-item__title">Макароны<br /> и крупы</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/bread.png);">
               <h3 class="category-item__title">Хлеб<br /> и выпечка</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href=""
               style="background-image: url(./images/static/category-items/oil.png);">
               <h3 class="category-item__title">Масло, соусы<br /> и специи</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--green" href="#"
               style="background-image: url(./images/static/category-items/peas.png);">
               <h3 class="category-item__title">Консервы<br /> и соления</h3>
@@ -448,7 +460,7 @@
     <section class="mb-6">
       <div class="container">
         <div class="row align-items-center mb-4">
-          <div class="col-auto">
+          <div class="col-12 col-sm-auto mb-3 mb-sm-0">
             <h2>КУЛИНАРИЯ</h2>
           </div>
           <div class="col-auto">
@@ -464,49 +476,49 @@
         </div>
 
         <div class="row">
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/kruassan.png);">
               <h3 class="category-item__title">Выпечка</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/pizza.png);">
               <h3 class="category-item__title">Пиццы</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/grille.png);">
               <h3 class="category-item__title">Гриль-меню</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/fresh-meat.png);">
               <h3 class="category-item__title">Свежее мясо</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/vegetables-2.png);">
               <h3 class="category-item__title">Салаты</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/soup.png);">
               <h3 class="category-item__title">Супы</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/hot-dishes.png);">
               <h3 class="category-item__title">Горячие блюда</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--brown" href="#"
               style="background-image: url(./images/static/category-items/dessert.png);">
               <h3 class="category-item__title">Десерты</h3>
@@ -519,7 +531,7 @@
     <section class="mb-6">
       <div class="container">
         <div class="row align-items-center mb-4">
-          <div class="col-auto">
+          <div class="col-12 col-sm-auto mb-3 mb-sm-0">
             <h2>ЗАМОРОЗКА</h2>
           </div>
           <div class="col-auto">
@@ -535,7 +547,7 @@
         </div>
 
         <div class="row">
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--purple" href="#"
               style="background-image: url(./images/static/category-items/vareniki.png);">
               <h3 class="category-item__title">Пельмени,<br />
@@ -543,35 +555,35 @@
                 и равиоли</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--purple" href="#"
               style="background-image: url(./images/static/category-items/hinkali.png);">
               <h3 class="category-item__title">Хинкали <br />
                 и манты</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--purple" href="#"
               style="background-image: url(./images/static/category-items/kotlety.png);">
               <h3 class="category-item__title">Полу-<br />
                 фабрикаты</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--purple" href="#"
               style="background-image: url(./images/static/category-items/vegetables.png);">
               <h3 class="category-item__title">Замороженные<br />
                 овощи</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--purple" href="#"
               style="background-image: url(./images/static/category-items/fish.png);">
               <h3 class="category-item__title">Рыба и<br />
                 морепродукты</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--purple" href="#"
               style="background-image: url(./images/static/category-items/meat.png);">
               <h3 class="category-item__title">Мясо</h3>
@@ -584,7 +596,7 @@
     <section class="mb-6">
       <div class="container">
         <div class="row align-items-center mb-4">
-          <div class="col-auto">
+          <div class="col-12 col-sm-auto mb-3 mb-sm-0">
             <h2>ДРУГОЕ</h2>
           </div>
           <div class="col-auto">
@@ -600,28 +612,28 @@
         </div>
 
         <div class="row">
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--cyan" href="#"
               style="background-image: url(./images/static/category-items/hygiene.png);">
               <h3 class="category-item__title">Красота<br />
                 и гигиена</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--cyan" href="#"
               style="background-image: url(./images/static/category-items/gloves.png);">
               <h3 class="category-item__title">Стирка <br />
                 и уборка</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--cyan" href="#"
               style="background-image: url(./images/static/category-items/cuts.png);">
               <h3 class="category-item__title">Полезные<br />
                 мелочи</h3>
             </a>
           </div>
-          <div class="col-3 mb-4">
+          <div class="col-sm-6 col-md-4 col-xl-3 mb-4">
             <a class="category-item category-item--cyan" href="#"
               style="background-image: url(./images/static/category-items/technique.png);">
               <h3 class="category-item__title">Бытовая<br />
@@ -635,7 +647,7 @@
     <section class="mb-6 promo-section">
       <div class="container">
         <div class="row align-items-center swiper-top mb-5">
-          <h2 class="col-auto">Акции</h2>
+          <h2 class="col-12 col-sm-auto mb-3 mb-sm-0">Акции</h2>
           <a href="#" class="col-auto btn btn-yellow btn-view-all">
             Смотреть все
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
@@ -780,22 +792,22 @@
         <div class="rate-shop">
           <img class="rate-shop__leaf" src="./images/static/leaf.png" alt="leaf">
           <div class="row">
-            <div class="col-5">
+            <div class="col-12 col-lg-5 z-5">
               <div class="rate-shop__title">Оцените магазин</div>
               <p class="rate-shop__text">Поделитесь впечатлениями о заказе
                 и помогите сделать нас лучше</p>
             </div>
 
-            <div class="col-6 d-inline-flex flex-column align-items-start justify-content-center">
+            <div class="col-12 col-lg-6 d-inline-flex flex-column align-items-start justify-content-center">
               <div class="mb-3">
                 <img src="./images/static/stars-2.png" alt="stars">
               </div>
               <button class="btn btn-rounded btn-wide btn-red btn-red--border rate-shop__btn" type="button">Оставить
                 отзыв</button>
             </div>
-            <div class="col-auto">
+            
               <img class="rate-shop__avokado" src="./images/static/avokado.png" alt="avokado">
-            </div>
+            
           </div>
         </div>
       </div>
@@ -811,7 +823,7 @@
   <footer class="footer">
     <div class="container">
       <div class="row mb-3">
-        <div class="col-2">
+        <div class="col-12 col-sm-6 col-lg-2 mb-3">
           <ul class="footer__col">
             <li class="footer__col-title">Ильинский онлайн</li>
             <li class="footer__col-link"><a href="#">Кулинария</a></li>
@@ -820,7 +832,7 @@
             <li class="footer__col-link"><a href="#">Другое</a></li>
           </ul>
         </div>
-        <div class="col-auto">
+        <div class="col-12 col-sm-6 col-lg-auto mb-3">
           <ul class="footer__col">
             <li class="footer__col-title">Ильинский клуб</li>
             <li class="footer__col-link"><a href="#">Акции</a></li>
@@ -830,7 +842,7 @@
             <li class="footer__col-link"><a href="#">Вакансии</a></li>
           </ul>
         </div>
-        <div class="col-auto">
+        <div class="col-12 col-sm-6 col-lg-auto mb-3">
           <ul class="footer__col">
             <li class="footer__col-link">
               <a class="d-flex" href="tel:+38000490999">
@@ -901,7 +913,7 @@
             </li>
           </ul>
         </div>
-        <div class="col">
+        <div class="col mb-3">
           <ul class="footer__col">
             <p>Подпишитесь на вкусные и полезные новости</p>
             <div class="d-flex mb-3">
@@ -911,20 +923,21 @@
             <label class="privacy-policy">
               <input class="mr-1" type="checkbox"></input>
               <span class="checkmark"></span>
-              <span class="privacy-policy__text">Согласен с <a class="d-inline-block privacy-policy__link" href="#">политикой конфиденциальности</a></span>
+              <span class="privacy-policy__text">Согласен с <a class="d-inline-block privacy-policy__link"
+                  href="#">политикой конфиденциальности</a></span>
             </label>
           </ul>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-md-4">
           <p>© 2022 Ильинский онлайн — доставка товаров и продуктов на дом</p>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-6 col-lg-4">
           <p>Информация на сайте не является публичной офертой</p>
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4">
           <svg class="visa-img" xmlns="http://www.w3.org/2000/svg" width="38" height="12" viewBox="0 0 38 12"
             fill="none">
             <path d="M15.0979 0.499023L13.1816 11.7445H16.2464L18.1643 0.499023H15.0979Z" fill="white"

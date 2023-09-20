@@ -29,6 +29,14 @@
     &__top {
         @include flex(flex, center, space-between);
         margin-bottom: 20px;
+
+        >* {
+            padding: 0 10px;
+        }
+    }
+
+    &__logo {
+        min-width: 160px;
     }
 
     &__catalog-btn {
@@ -38,8 +46,35 @@
         border-radius: 31px;
         padding: 12px 19px 12px 22px;
 
+        &--mobile {
+            .burger {
+                background-color: unset;
+                margin-right: 0;
+                >span,
+                >span::before,
+                >span::after {
+                    background-color: $color-red;
+                    width: 20px;
+                    height: 3px;
+                }
+            }
+        }
+
         .burger {
             margin-right: 5px;
+        }
+    }
+
+    &__search {
+        flex-grow: 1;
+
+        &-mobile {
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+            padding: 11px 14px;
+            background-color: rgba(255, 169, 0, 0.7);
         }
     }
 
@@ -69,10 +104,19 @@
             height: 22px;
         }
     }
-
+    &__categories{
+        overflow-x: auto;
+    display: flex;
+    padding-bottom: 10px;
+    }
     &__category {
         color: #000;
         margin-right: 10px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
     }
 
     .btn {
@@ -373,6 +417,7 @@ $top-banner-item-height: 460px;
             ~.checkmark {
                 background-color: #2196F3;
                 border: none;
+
                 &::after {
                     display: block;
                 }
@@ -404,3 +449,5 @@ $top-banner-item-height: 460px;
         }
     }
 }
+
+@import '_media.scss';

@@ -1,0 +1,145 @@
+@media(max-width: 1350px) {
+    .delivery-select__region {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 9px 11px;
+    }
+
+    .delivery-select__text {
+        display: none;
+    }
+
+    .header__delivery-method {
+        margin-left: auto;
+    }
+
+}
+
+@media(max-width: 991px) {
+    .top-banner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .banner-delivery__text{
+        font-size: 1.15rem;
+    }
+    .banner-delivery__text-big {
+        font-size: 1.8rem;
+    }
+    .banner-delivery{
+        padding: 40px;
+    }
+    .banner-delivery__btn{
+        font-size: 1.25rem;
+    }
+}
+
+@media(max-width: 767px) {
+    .header__logo {
+        margin-right: auto;
+    }
+    .banner-delivery{
+        padding: 30px;
+    }
+    .banner-delivery__text{
+        font-size: 1rem;
+    }
+    .banner-delivery__text-big {
+        font-size: 1.4rem;
+    }
+    .banner-delivery__btn{
+        font-size: 1.15rem;
+    }
+    .rate-shop{
+        padding: 30px 40px;
+    }
+    .header__buttons{
+        >*{
+            display: flex;
+            
+            border-radius: 11px;
+            width: 43px;
+            height: 34px;
+        }
+    }
+    .header .btn {
+        height: 34px;
+    }
+    .delivery-select__region{
+        font-size: 0.8rem;
+        img{
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .delivery-select__region{
+        border-radius: 11px;
+        padding: 6px 8px;
+    }
+}
+
+@media(max-width: 676px) {
+    .top-banner {
+        display: flex;
+        flex-direction: column;
+        .swiper {
+            &-container {
+                grid-column: span 1;
+                grid-row: span 2;
+                // grid-template-rows: repeat(2, 1fr);
+            }
+        }
+        .item{
+            height: 180px;
+        }
+    }
+    .category-item{
+        background-position: left 100%;
+    }
+}
+
+@media(max-width: 576px) {
+    .banner-delivery__btn{
+        font-size: 1rem;
+    }
+    .banner-delivery__text-big {
+        font-size: 1.1rem;
+    }
+    .rate-shop{
+        padding: 20px 30px;
+    }
+    .container{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 500px) {
+    .header__basket{
+        display: none;
+    }
+    .header__catalog-btn{
+        padding: 0px;
+    }
+    .header__top>* {
+        padding: 0 5px;
+    }
+    .header__logo {
+        min-width: 100px;
+    }
+}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
+
+@media(max-width: 650px) {}
