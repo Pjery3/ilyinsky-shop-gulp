@@ -10,6 +10,7 @@ $color-brown--dark: rgba(46, 5, 5, 1);
 $background-yellow: rgba(255, 248, 235, 1);
 $background-yellow-dark: rgba(255, 232, 188, 1);
 $background-orange: rgba(255, 169, 0, 1);
+$background-red--footer: rgba(217, 0, 0, 1);
 
 $border-yellow: rgba(255, 169, 0, 0.45);
 $border-gray: rgba(225, 225, 225, 1);
@@ -535,8 +536,25 @@ h2 {
     }
   }
 }
-
 // 
+
+// input
+.input{
+  background-color: #fff;
+  border-radius: 16px;
+  color: #000;
+  font-size: 1.33rem;
+  border: none;
+  height: 56px;
+  width: 100%;
+
+  padding: 20px;
+  &::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+// 
+
 // search
 .search {
   width: 317px;
@@ -584,4 +602,41 @@ h2 {
   }
 }
 
-// 
+//
+
+.footer{
+  background-color: $background-red--footer;
+  color: #fff;
+
+  padding: 37px 0 19px;
+
+  &__col{
+    li{
+      line-height: 154%;
+      margin-bottom: 5px;
+    }
+    &-title{
+      font-weight: 700;
+    }
+    &-link{
+      a{
+        color: #fff;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    &-icon{
+      margin-right: 10px;
+    }
+    .phone-number{
+      font-size: 1.33rem;
+    }
+    .phone-description{
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.93rem;
+
+      pointer-events: none;
+    }
+  }
+}

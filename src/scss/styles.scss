@@ -120,32 +120,39 @@ $top-banner-item-height: 460px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-    .swiper{
+
+    .swiper {
         overflow: unset;
-        &-container{
+
+        &-container {
             grid-column: span 2;
             grid-row: span 2;
             // grid-template-rows: repeat(2, 1fr);
         }
-        &-wrapper{
+
+        &-wrapper {
             box-sizing: border-box;
         }
     }
-    .slider__item{
-        &-title{
+
+    .slider__item {
+        &-title {
             font-size: 50px;
             font-weight: 700;
             line-height: 1.2;
         }
-        .btn{
+
+        .btn {
             border-width: 2px;
             padding: 14px 28px 12px;
         }
     }
+
     .item {
         // height: calc($top-banner-item-height/2);
         padding: 19px;
-        &-title{
+
+        &-title {
             font-size: 28px;
             font-weight: 700;
             line-height: 1.3;
@@ -239,76 +246,88 @@ $top-banner-item-height: 460px;
             }
         }
     }
-    .swiper-arrow{
-        &.swiper-button-disabled{
+
+    .swiper-arrow {
+        &.swiper-button-disabled {
             background-color: #dedede;
         }
     }
 }
-.swiper-slide{
+
+.swiper-slide {
     height: auto;
 }
-.swiper-wrapper{
+
+.swiper-wrapper {
     box-sizing: border-box;
 }
-.promo-section{
-    .category-item{
-        &__title{
+
+.promo-section {
+    .category-item {
+        &__title {
             line-height: normal;
         }
-        .btn{
+
+        .btn {
             font-weight: 700;
         }
     }
 }
-.delivery{
-    &-item{
+
+.delivery {
+    &-item {
         font-size: 20px;
         line-height: normal;
-        &__title{
+
+        &__title {
             color: $color-red;
             font-weight: 700;
         }
-        &__text{
 
-        }
+        &__text {}
     }
 }
 
-.banner-delivery{
+.banner-delivery {
     background: radial-gradient(1404.49% 180.6% at 73.62% -94.51%, #FF1F00 0%, #FF7715 100%);
     border-radius: 44px;
     padding: 40px 63px;
     color: #fff;
-    &__text{
+
+    &__text {
         font-weight: 700;
         font-size: 1.35rem;
     }
-    &__text-big{
+
+    &__text-big {
         font-size: 2.30rem;
     }
-    &__btn{
+
+    &__btn {
         font-size: 1.35rem;
         border-width: 2px;
         font-weight: 600;
     }
 }
 
-.rate-shop{
+.rate-shop {
     position: relative;
     padding: 28px 63px;
     color: $color-brown--dark;
     background-color: $border-brown;
     border-radius: 16px;
-    &__title{
+
+    &__title {
         font-size: 2.53rem;
         font-weight: 700;
     }
-    &__text{
+
+    &__text {
         font-size: 1.33rem;
         line-height: normal;
     }
-    &__avokado{
+
+    &__avokado {
         position: absolute;
         right: 0%;
         top: 50%;
@@ -316,7 +335,8 @@ $top-banner-item-height: 460px;
 
         width: 257px;
     }
-    &__leaf{
+
+    &__leaf {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -324,8 +344,63 @@ $top-banner-item-height: 460px;
 
         width: 82px;
     }
-    &__btn{
+
+    &__btn {
         border-width: 2px;
         font-weight: 600;
+    }
+}
+
+.privacy-policy {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    &__link {
+        color: rgba(255, 255, 255, 0.5);
+        text-decoration: underline;
+    }
+
+    input {
+        display: none;
+        // position: absolute;
+        // opacity: 0;
+        // cursor: pointer;
+
+        &:checked {
+            ~.checkmark {
+                background-color: #2196F3;
+                border: none;
+                &::after {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .checkmark {
+        position: relative;
+        height: 14px;
+        width: 14px;
+        // background-color: #eee;
+        border: 3px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        margin-right: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: white;
+        }
     }
 }
