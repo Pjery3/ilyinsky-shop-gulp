@@ -1,3 +1,8 @@
+@media(min-width: 576px) and (max-width: 991px){
+    .rate-shop__text{
+        max-width: 65%;
+    }
+}
 @media(max-width: 1350px) {
     .delivery-select__region {
         border-top-right-radius: 16px;
@@ -19,69 +24,109 @@
     .top-banner {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+
+        .slider__item {
+            padding: 45px 50px;
+
+            &-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        .item-title {
+            font-size: 1.4rem;
+        }
     }
-    .banner-delivery__text{
+
+    .banner-delivery__text {
         font-size: 1.15rem;
     }
+
     .banner-delivery__text-big {
         font-size: 1.8rem;
     }
-    .banner-delivery{
+
+    .banner-delivery {
         padding: 40px;
     }
-    .banner-delivery__btn{
+
+    .banner-delivery__btn {
         font-size: 1.25rem;
+    }
+    .category-item{
+        height: 260px;
     }
 }
 
 @media(max-width: 767px) {
+    html{
+        font-size: 14px;
+    }
     .header__logo {
         margin-right: auto;
     }
-    .banner-delivery{
+
+    .banner-delivery {
         padding: 30px;
     }
-    .banner-delivery__text{
+
+    .banner-delivery__text {
         font-size: 1rem;
     }
+
     .banner-delivery__text-big {
         font-size: 1.4rem;
     }
-    .banner-delivery__btn{
+
+    .banner-delivery__btn {
         font-size: 1.15rem;
     }
-    .rate-shop{
+
+    .rate-shop {
         padding: 30px 40px;
     }
-    .header__buttons{
-        >*{
+
+    .header__buttons {
+        >* {
             display: flex;
-            
+
             border-radius: 11px;
             width: 43px;
             height: 34px;
         }
     }
+
     .header .btn {
         height: 34px;
     }
-    .delivery-select__region{
+
+    .delivery-select__region {
         font-size: 0.8rem;
-        img{
+
+        img {
             width: 10px;
             height: 10px;
         }
     }
-    .delivery-select__region{
+
+    .delivery-select__region {
         border-radius: 11px;
         padding: 6px 8px;
     }
+    .category-item{
+        height: 230px;
+        &__title{
+            text-shadow: 0 0 black;
+        }
+    }
+    
 }
 
 @media(max-width: 676px) {
     .top-banner {
         display: flex;
         flex-direction: column;
+
         .swiper {
             &-container {
                 grid-column: span 1;
@@ -89,40 +134,88 @@
                 // grid-template-rows: repeat(2, 1fr);
             }
         }
-        .item{
+
+        .item {
             height: 180px;
         }
     }
-    .category-item{
+
+    .category-item {
         background-position: left 100%;
+    }
+    .top-banner {
+        .item-title {
+            font-size: 1.6rem;
+        }
     }
 }
 
 @media(max-width: 576px) {
-    .banner-delivery__btn{
+    html{
+        font-size: 13px;
+    }
+    .banner-delivery__btn {
         font-size: 1rem;
     }
+
     .banner-delivery__text-big {
         font-size: 1.1rem;
     }
-    .rate-shop{
+
+    .rate-shop {
         padding: 20px 30px;
     }
-    .container{
+
+    .container {
         padding: 0 15px;
+    }
+
+    .top-banner .slider__item-title {
+        font-size: 1.7rem;
+    }
+
+    .slider {
+        $slick-arrow-size: 32px;
+        $slider-item-padding-x: 50px;
+        .swiper-prev,
+        .swiper-next {
+            width: $slick-arrow-size;
+            height: $slick-arrow-size;
+        }
+        .swiper-prev {
+            left: calc($slick-arrow-size/2 * -1);
+        }
+
+        .swiper-next {
+            right: calc($slick-arrow-size/2 * -1);
+        }
+    }
+    .top-banner .slider__item .btn {
+        padding: 14px 12px 12px;
+    }
+    .top-banner .slider__item {
+        padding: 25px 40px;
+    }
+    .category-item{
+        height: 210px;
+        background-size: 60%;
+        background-position: right 100%;
     }
 }
 
 @media(max-width: 500px) {
-    .header__basket{
+    .header__basket {
         display: none;
     }
-    .header__catalog-btn{
+
+    .header__catalog-btn {
         padding: 0px;
     }
+
     .header__top>* {
         padding: 0 5px;
     }
+
     .header__logo {
         min-width: 100px;
     }
