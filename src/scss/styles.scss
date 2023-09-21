@@ -43,6 +43,7 @@
         display: flex;
         align-items: center;
 
+        position: relative;
         border-radius: 31px;
         padding: 12px 19px 12px 22px;
 
@@ -452,5 +453,21 @@ $top-banner-item-height: 460px;
         }
     }
 }
+.catalog-content{
+    position: absolute;
+    top: 100%;
+    z-index: 50;
+    min-width: 400px;
+    background-color: #fff;
+    border-radius: 16px;
+    color: #000;
+    &__list{
+        
+    }
+    &__item{
+        @include flex(flex, center, space-between)
+    }
+}
+
 
 @import '_media.scss';

@@ -154,11 +154,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //   CATALOG_BTN.classList.remove('active');
     // }
   })
-  let catalogBtn = document.querySelector('.header__catalog-btn');
-  catalogBtn.addEventListener('click', function (e) {
-    console.log('e', e);
-    e.target.classList.contains('active') ? e.target.classList.remove('active') : e.target.classList.add('active');
-  })
+  //burger-button
+  document.querySelectorAll('.header__catalog-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      btn.classList.contains('active') ? btn.classList.remove('active') : btn.classList.add('active');
+    })
+  });
+  
   let discountBtn = document.querySelector('.banner-discount__close')
   discountBtn.addEventListener('click', function (e) {
     e.target.closest('.banner-discount').remove();
@@ -167,8 +169,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   document.querySelectorAll('[data-item-counter]').forEach(item => {
     let currentCard = item.closest('.card');
 
-    console.log('isov', currentCard.classList.contains('over-quantity'));
-
     item.querySelector('.item-counter__add').addEventListener('click', function (e) {
       if (currentCard.classList.contains('over-quantity')) return;
 
@@ -176,14 +176,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
       item.setAttribute('data-item-counter', ++currentCount);
       item.querySelector('.item-counter__number').textContent = currentCount;
-      console.log('curcount', currentCount);
       if (currentCard.getAttribute('data-item-stock') <= currentCount) {
         currentCard.classList.add('over-quantity');
       }
     })
 
     item.querySelector('.item-counter__reduce').addEventListener('click', function (e) {
-      console.log('more', !item.getAttribute('data-item-counter') > 1);
       if (!(item.getAttribute('data-item-counter') > 1)) return;
 
       let currentCount = item.getAttribute('data-item-counter');
