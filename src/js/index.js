@@ -194,4 +194,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
   })
+
+  // document.querySelectorAll('.catalog-content__item').forEach((item, idx) => {
+  //   item.addEventListener('mouseover', function(e){
+  //     document.querySelectorAll('.catalog-content__list--subsection .catalog-content__item')[idx].classList.add('active');
+  //   })
+  //   item.addEventListener('mouseout', function(e){
+  //     document.querySelectorAll('.catalog-content__list--subsection .catalog-content__item')[idx].classList.remove('active');
+  //   })
+  // })
 });
