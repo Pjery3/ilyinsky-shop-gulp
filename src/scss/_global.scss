@@ -64,7 +64,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  
+
   color: #000;
 }
 
@@ -97,7 +97,8 @@ img {
 .mb-6 {
   margin-bottom: 5rem;
 }
-.z-5{
+
+.z-5 {
   z-index: 5;
 }
 
@@ -195,9 +196,11 @@ h2 {
   &-rounded {
     border-radius: 31px;
   }
-  &-wide{
+
+  &-wide {
     padding: 13px 32px;
   }
+
   &-view-all {
     color: $color-yellow;
     font-weight: 500;
@@ -274,9 +277,11 @@ h2 {
     min-height: 60px;
     padding: $card-content-padding;
   }
-  &__prices{
+
+  &__prices {
     margin-right: 10px;
   }
+
   &__price {
     font-size: 1.6rem;
     line-height: 1;
@@ -545,10 +550,11 @@ h2 {
     }
   }
 }
+
 // 
 
 // input
-.input{
+.input {
   background-color: #fff;
   border-radius: 16px;
   color: #000;
@@ -558,10 +564,12 @@ h2 {
   width: 100%;
 
   padding: 20px;
-  &::placeholder{
+
+  &::placeholder {
     color: rgba(0, 0, 0, 0.5);
   }
 }
+
 // 
 
 // search
@@ -613,35 +621,114 @@ h2 {
 
 //
 
-.footer{
+//checkbox 
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  input {
+    display: none;
+
+    &:checked {
+      ~.checkmark {
+        background-color: #2196F3;
+        border: none;
+
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .checkmark {
+    position: relative;
+    height: 14px;
+    width: 14px;
+    // background-color: #eee;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: white;
+    }
+  }
+
+  &--orange {
+    .checkmark {
+      background-color: $background-orange;
+      border: none;
+    }
+
+    input {
+      display: none;
+
+      &:checked {
+        ~.checkmark {
+          background-color: $background-orange;
+          border: none;
+
+          &::after {
+            background-color: $color-red;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 
+
+.footer {
   background-color: $background-red--footer;
   color: #fff;
 
   padding: 37px 0 19px;
 
-  &__col{
-    li{
+  &__col {
+    li {
       line-height: 154%;
       margin-bottom: 5px;
     }
-    &-title{
+
+    &-title {
       font-weight: 700;
     }
-    &-link{
-      a{
+
+    &-link {
+      a {
         color: #fff;
-        &:hover{
+
+        &:hover {
           text-decoration: underline;
         }
       }
     }
-    &-icon{
+
+    &-icon {
       margin-right: 10px;
     }
-    .phone-number{
+
+    .phone-number {
       font-size: 1.33rem;
     }
-    .phone-description{
+
+    .phone-description {
       color: rgba(255, 255, 255, 0.4);
       font-size: 0.93rem;
 
