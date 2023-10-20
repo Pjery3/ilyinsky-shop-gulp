@@ -129,6 +129,7 @@
 
     .btn {
         height: 48px;
+        font-size: 0.8rem;
     }
 }
 
@@ -154,6 +155,7 @@
     }
 
     &__text {
+        @include flex(flex, center, start);
         background-color: $background-orange;
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
@@ -161,6 +163,12 @@
 
         p {
             margin-bottom: 0;
+            &:first-child{
+                font-size: 0.7rem;
+            }
+            &:last-child{
+                font-size: 0.8rem;
+            }
         }
     }
 }
@@ -332,7 +340,6 @@ $top-banner-item-height: 460px;
 
 .delivery {
     &-item {
-        font-size: 1.33rem;
         line-height: normal;
 
         &__title {
@@ -379,7 +386,6 @@ $top-banner-item-height: 460px;
     }
 
     &__text {
-        font-size: 1.33rem;
         line-height: normal;
     }
 
@@ -526,5 +532,50 @@ $top-banner-item-height: 460px;
     }
 }
 
+.filter-buttons{
+    flex-wrap: wrap;
+    gap: 10px;
+    .btn{
+        position: relative;
+        padding: 5px 24px;
+        
+        //все кнопки, кроме очистить фильтр(серой кнопки)
+        &:not(.clear-filter){
+            svg{
+                position: absolute;
+                right: 8px;
+                visibility: hidden;
+            }
+        }
+        &.active{
+            svg{
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.not-found {
+    position: relative;
+    padding: 28px 63px;
+    color: $color-brown--dark;
+    background-color: $border-brown;
+    border-radius: 16px;
+
+    &__title {
+        font-size: 1.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        line-height: normal;
+    }
+
+    &__btn {
+        border-width: 2px;
+        font-weight: 600;
+    }
+}
 
 @import '_media.scss';

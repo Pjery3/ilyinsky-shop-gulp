@@ -60,6 +60,16 @@
     .category-item {
         height: 260px;
     }
+
+    .filter-buttons{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        .btn{
+            font-size: 0.8rem;
+            text-wrap: nowrap;
+        }
+    }
 }
 
 @media(max-width: 767px) {
@@ -129,6 +139,9 @@
         }
     }
 
+    .filter-buttons{
+        gap: 5px;
+    }
 }
 
 @media(max-width: 676px) {

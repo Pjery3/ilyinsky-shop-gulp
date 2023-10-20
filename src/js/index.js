@@ -72,46 +72,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //   el: '.swiper-scrollbar',
     // },
   });
-  const swiper2 = new Swiper('.discount-swiper .swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: false,
-    spaceBetween: 25,
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.discount-swiper .swiper-next',
-      prevEl: '.discount-swiper .swiper-prev',
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      576: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      // when window width is >= 480px
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      },
-      // when window width is >= 640px
-      1300: {
-        slidesPerView: 4,
-        spaceBetween: 40
-      }
-    }
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-  });
   const swiper3 = new Swiper('.promo-section .swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -144,6 +104,46 @@ document.addEventListener("DOMContentLoaded", (event) => {
       }
     },
   });
+  const regularSwiper = new Swiper('.regular-swiper .swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 25,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    // },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.regular-swiper .swiper-next',
+      prevEl: '.regular-swiper .swiper-prev',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
 
   let body = document.querySelector('body');
   body.addEventListener('click', function (e) {
@@ -153,6 +153,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // if (!e.target.closest('.catalog-btn')) {
     //   CATALOG_BTN.classList.remove('active');
     // }
+  })
+
+  document.querySelectorAll('.filter-buttons .btn').forEach(btn => {
+    btn.addEventListener('click', function(e){
+      btn.classList.contains('active') ? btn.classList.remove('active') : btn.classList.add('active');
+    })
   })
   //burger-button
   document.querySelectorAll('.header__catalog-btn').forEach(btn => {
