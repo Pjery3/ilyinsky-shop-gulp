@@ -1,6 +1,10 @@
 @import '_mixins.scss';
 @import '_global.scss';
 
+.error-404-content{display: flex;flex-direction: column; justify-content: center; height: 100vh;}
+.img-404{text-align: center;}
+.img-404 img{max-width: 550px;}
+
 .banner-discount {
     height: 84px;
 
@@ -554,7 +558,6 @@ $top-banner-item-height: 460px;
         }
     }
 }
-
 .not-found {
     position: relative;
     padding: 28px 63px;
