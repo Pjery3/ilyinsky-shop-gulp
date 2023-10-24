@@ -763,6 +763,76 @@ h2 {
 }
 // 
 
+// модалка
+.modal-wrap {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(30,30,30,.5);
+	backdrop-filter: blur(12px);
+	transition: opacity .4s, visibility .4s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 600;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.modal{
+		position: relative;
+		max-width: 96vw;
+		width: 800px;
+		padding: 35px 40px;
+		background-color: var(--dark);
+		border: 1px solid #40404A;
+		border-radius: 20px;
+		z-index: 610;
+
+		&.modal-sm{
+			width: 450px;
+		}
+
+		.close-modal-btn {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			top: -50px;
+			right: 0;
+			text-align: center;
+			line-height: 40px;
+			font-size: 2rem;
+			color: #D0C8D1;
+			cursor: pointer;
+		}
+
+		.m-head {
+			font-size: 1.6rem;
+			font-weight: 700;
+			margin-bottom: 2rem;
+		}
+
+		.m-body {
+			max-height: 82vh;
+			padding-right: 10px;
+			padding-bottom: 15px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+	}
+}
+
+.modal-link{
+	cursor: pointer;
+}
+// 
+
 .footer {
   background-color: $background-red--footer;
   color: #fff;

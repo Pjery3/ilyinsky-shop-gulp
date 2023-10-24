@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
     },
-    
+
     // And if we need scrollbar
     // scrollbar: {
     //   el: '.swiper-scrollbar',
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   })
 
   document.querySelectorAll('.filter-buttons .btn').forEach(btn => {
-    btn.addEventListener('click', function(e){
+    btn.addEventListener('click', function (e) {
       btn.classList.contains('active') ? btn.classList.remove('active') : btn.classList.add('active');
     })
   })
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       btn.classList.contains('active') ? btn.classList.remove('active') : btn.classList.add('active');
     })
   });
-  
+
   let discountBtn = document.querySelector('.banner-discount__close')
   discountBtn.addEventListener('click', function (e) {
     e.target.closest('.banner-discount').remove();
@@ -200,6 +200,59 @@ document.addEventListener("DOMContentLoaded", (event) => {
     })
 
   })
+
+
+  let modal = new Modal();
+
+  //нажатин вне попапа
+  document.querySelector('body').addEventListener('click', function (e) {
+    const target = e.target
+    if (!target.closest('.modal') && !target.closest('.modal-link')) modal.close();
+  })
+
+  //закрываем попап по клику на крестик
+  document.querySelectorAll('.close-modal, .close-modal-btn').forEach(btnClose => {
+    btnClose.addEventListener('click', function (e) {
+      modal.close();
+    })
+  })
+
+  //открываем попап по его номеру/классу
+  document.querySelectorAll('.modal-link').forEach(modalLink => {
+    modalLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log('logdata', modalLink.getAttribute('data-modal'));
+      modal.open(modalLink.getAttribute('data-modal'));
+
+    })
+  })
+
+
+
+  //открыть-закрыть попап
+  function Modal() {
+    this.open = function (item, title, text) {
+      let modalEl = document.querySelector('.modal-wrap' + item)
+      modalEl.classList.add('active');
+      modalEl.querySelector('.modal').classList.add('active');
+      document.querySelector('body').classList.add('js-popup-active');
+
+      if (title != undefined && title != false) {
+        modalEl.querySelector('.m-title').textContent(title);
+      }
+
+      if (text != undefined && text != false) {
+        modalEl.querySelector('.m-text').textContent(text);
+      }
+    }
+
+    this.close = function (item) {
+      let modalEl = document.querySelector(item ? '.modal-wrap' + item : '.modal-wrap');
+      modalEl.classList.remove('active');
+      modalEl.querySelector('.modal').classList.remove('active');
+      document.querySelector('body').classList.remove('js-popup-active');
+    }
+  }
 
   // document.querySelectorAll('.catalog-content__item').forEach((item, idx) => {
   //   item.addEventListener('mouseover', function(e){
