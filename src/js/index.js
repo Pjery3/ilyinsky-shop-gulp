@@ -145,6 +145,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // },
   });
 
+  var cardSwiper = new Swiper(".swiper-card-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+  });
+  var cardSwiperThumb = new Swiper(".swiper-card-navigation", {
+    spaceBetween: 10,
+
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+    thumbs: {
+      swiper: cardSwiper,
+    },
+  });
+
   let body = document.querySelector('body');
   body.addEventListener('click', function (e) {
 

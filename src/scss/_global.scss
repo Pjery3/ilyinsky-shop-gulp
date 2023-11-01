@@ -66,6 +66,12 @@ body {
   font-family: "Nunito", sans-serif;
 
   color: #000;
+
+  &.js-popup-active {
+    height: 100vh;
+    overflow: hidden;
+    padding-right: 15px;
+  }
 }
 
 a {
@@ -177,13 +183,15 @@ h2 {
       background-color: $background-yellow-dark;
     }
 
-    &.color-black{
+    &.color-black {
       color: #000;
-      svg{
-        path{
+
+      svg {
+        path {
           fill: #000;
         }
       }
+
       // &:hover{
       //   color: #fff;
       //   svg{
@@ -192,16 +200,39 @@ h2 {
       //     }
       //   }
       // }
-      &.active{
+      &.active {
         color: #fff;
-        svg{
-          path{
+
+        svg {
+          path {
             fill: #fff;
           }
         }
       }
     }
-    &.active{
+
+    &.color-yellow {
+      color: $color-yellow;
+      font-weight: 500;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: $background-orange;
+        color: #fff;
+
+        .icon {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+
+      .icon {
+        margin-left: 10px;
+      }
+    }
+
+    &.active {
       background-color: $background-orange;
     }
   }
@@ -230,26 +261,7 @@ h2 {
     padding: 13px 32px;
   }
 
-  &-view-all {
-    color: $color-yellow;
-    font-weight: 500;
-    padding: 10px 20px;
-
-    &:hover {
-      background-color: $background-orange;
-      color: #fff;
-
-      .icon {
-        path {
-          fill: #fff;
-        }
-      }
-    }
-
-    .icon {
-      margin-left: 10px;
-    }
-  }
+  &-view-all {}
 }
 
 .card {
@@ -323,11 +335,13 @@ h2 {
     color: $color-gray;
     text-decoration: line-through;
   }
-  &__btn{
-    .btn{
+
+  &__btn {
+    .btn {
       font-size: 0.8rem;
     }
   }
+
   &__favourite {
     position: absolute;
     right: 18px;
@@ -477,7 +491,7 @@ h2 {
     background-color: $background-category-yellow;
   }
 
-  &__title{
+  &__title {
     font-size: 1.5rem;
   }
 }
@@ -666,11 +680,12 @@ h2 {
   cursor: pointer;
   user-select: none;
 
-  .checkmark{
+  .checkmark {
     display: inline-block;
-        width: 16px;
-        height: 16px;
+    width: 16px;
+    height: 16px;
   }
+
   input {
     display: none;
 
@@ -737,100 +752,148 @@ h2 {
 // 
 
 // категории в каталоге
-.col-title{font-weight: bold; text-transform: uppercase;}
-.category-title{font-weight: bold;}
-.category-name a{display: block;color: #000; padding: 0 25px; border-radius: 2px;}
-.category-name a:hover{background-color: $background-yellow;}
+.col-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.category-title {
+  font-weight: bold;
+}
+
+.category-name a {
+  display: block;
+  color: #000;
+  padding: 0 25px;
+  border-radius: 2px;
+}
+
+.category-name a:hover {
+  background-color: $background-yellow;
+}
+
 // 
 
 // pagination
-.pagination{
-  li{
+.pagination {
+  li {
     display: inline;
     border-radius: 7px;
     color: rgba(182, 150, 87, 1);
     cursor: pointer;
     padding: 7px 14px;
-    &.active{
+
+    &.active {
       background-color: $background-orange;
       color: #fff;
     }
-    &:last-child{
+
+    &:last-child {
       background-color: $background-orange;
       color: #fff;
     }
   }
 }
+
 // 
 
 // модалка
 .modal-wrap {
-	position: fixed;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(30,30,30,.5);
-	backdrop-filter: blur(12px);
-	transition: opacity .4s, visibility .4s;
-	opacity: 0;
-	visibility: hidden;
-	z-index: 600;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(30, 30, 30, .5);
+  backdrop-filter: blur(12px);
+  transition: opacity .4s, visibility .4s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 600;
 
-	&.active {
-		opacity: 1;
-		visibility: visible;
-	}
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
-	.modal{
-		position: relative;
-		max-width: 96vw;
-		width: 800px;
-		padding: 35px 40px;
-		background-color: var(--dark);
-		border: 1px solid #40404A;
-		border-radius: 20px;
-		z-index: 610;
+  .modal {
+    position: relative;
+    max-width: 96vw;
+    width: 1290px;
+    padding: 35px 40px;
+    background-color: #fff;
+    border: 1px solid #40404A;
+    border-radius: 20px;
+    z-index: 610;
 
-		&.modal-sm{
-			width: 450px;
-		}
+    &.modal-sm {
+      width: 450px;
+    }
 
-		.close-modal-btn {
-			position: absolute;
-			width: 40px;
-			height: 40px;
-			top: -50px;
-			right: 0;
-			text-align: center;
-			line-height: 40px;
-			font-size: 2rem;
-			color: #D0C8D1;
-			cursor: pointer;
-		}
+    .close-modal-btn {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: -50px;
+      right: 0;
+      text-align: center;
+      line-height: 40px;
+      font-size: 2rem;
+      color: #D0C8D1;
+      cursor: pointer;
+    }
 
-		.m-head {
-			font-size: 1.6rem;
-			font-weight: 700;
-			margin-bottom: 2rem;
-		}
+    .m-head {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
 
-		.m-body {
-			max-height: 82vh;
-			padding-right: 10px;
-			padding-bottom: 15px;
-			overflow-x: hidden;
-			overflow-y: auto;
-		}
-	}
+    .m-body {
+      max-height: 82vh;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
 }
 
-.modal-link{
-	cursor: pointer;
+.modal-link {
+  cursor: pointer;
 }
+
+.card-modal {
+  &__collection {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__chars {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  &__favorite {
+    @include flex(inline-flex, center, center);
+
+
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+  }
+}
+
 // 
 
 .footer {
@@ -863,7 +926,7 @@ h2 {
       margin-right: 10px;
     }
 
-    .phone-number { }
+    .phone-number {}
 
     .phone-description {
       color: rgba(255, 255, 255, 0.4);

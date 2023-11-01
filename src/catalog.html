@@ -379,7 +379,8 @@
                       <span class="card__oldprice">129,00 грн</span>
                     </div>
                     <div class="card__btn">
-                      <button class="btn btn-red--border modal-link" type="button" data-modal=".m-info">В корзину</button>
+                      <button class="btn btn-red--border modal-link" type="button" data-modal=".m-info">В
+                        корзину</button>
                     </div>
                   </div>
                 </div>
@@ -958,18 +959,93 @@
 
   <div class="modals">
     <div class="modal-wrap m-info">
-      <div class="modal">
+      <div class="modal card-modal">
         <div class="close-modal close-modal-btn">&times;</div>
-        <div class="m-head m-title">title</div>
-        <div class="m-body">
-          <div class="m-text mb-4">content</div>
-          <div class="text-center">
-            <div class="btn btn-orange close-modal"></div>
+        <div class="row">
+          <div class="col-4">
+            <div class="swiper swiper-card-navigation">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+              </div>
+              <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
+            </div>
+            <div class="swiper swiper-card-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/static/discount-block/granola.png" alt="Фото продукта 1">
+                </div>
+              </div>
+              <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
+            </div>
           </div>
+          <div class="col-8">
+            <span class="card-modal__collection mb-4 d-inline-block">Сибирская Коллекция </span>
+            <h2 class="card-modal__title mb-3">Блинчики замороженные Сибирская Коллекция с малиной</h2>
+            <div class="card-modal__chars mb-3">
+              <span class="card-modal__weight">400г</span>
+              <span>・</span>
+              <span class="card-modal__quantity">В наличии 4 шт</span>
+            </div>
+            <div class="d-flex align-items-center mb-4">
+              <span class="card-modal__price">376,00 грн</span>
+              <div class="item-counter ml-4" data-item-counter="1">
+                <span class="item-counter__reduce">-</span>
+                <span class="item-counter__number">1</span>
+                <span class="item-counter__add item-counter__add--active">+</span>
+              </div>
+              <button class="card-modal__favorite ml-2" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                  <path d="M20.1756 1.86141C18.9981 0.669166 17.4296 0.0094249 15.7635 0.0094249C14.0973 0.0094249 12.5242 0.669166 11.3467 1.86612L11.007 2.21013L10.6579 1.8567C9.47577 0.659741 7.90733 0 6.23651 0C4.57034 0 3.00655 0.655029 1.82906 1.85199C0.646921 3.04894 0 4.63703 0 6.32409C0 8.01114 0.651575 9.59923 1.83372 10.7915L10.3368 19.4011C10.5136 19.5802 10.7556 19.6838 11.0116 19.6838C11.2629 19.6838 11.505 19.5802 11.6865 19.4011L20.1663 10.8056C21.3484 9.60865 21.9953 8.02056 22 6.33351C22.0046 4.64646 21.3531 3.05837 20.1756 1.86141Z" fill="#DADADA"></path>
+                </svg>
+              </button>
+            </div>
+            <p class="mb-3">
+              Состав: Тесто: мука пшеничная высший сорт, вода питьевая, масло сливочное, масло подсолнечное высший сорт, молоко сухое, меланж яичный, сахар, соль, разрыхлитель (гидрокарбонат натрия);
+              начинка: малина свежезамороженная, сахар, ванилин<br>
+              Пищевая ценность на 100 г: белки 4.5 г, жиры 6.5 г, углеводы 30.5 г, энергетическая ценность 220 ккал<br>
+              Срок хранения: 6 мес<br>
+              Условия хранения: При температуре не выше -18°С<br>
+              Упаковка: Картонная коробка
+            </p>
+            <a href="#" class="btn btn-yellow color-yellow card-modal__detail-link">
+              Подробнее
+              <svg class="icon ml-2" xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12" fill="none">
+                <path d="M1.69322 0.289794L6.67075 5.26732C7.05701 5.65559 7.05701 6.28273 6.67075 6.671L1.69322 11.6485C1.32092 11.9681 0.770393 11.9681 0.398088 11.6485C-0.0190492 11.2911 -0.0677967 10.662 0.289598 10.2449L4.56027 5.97413L0.289548 1.69347C-0.0967141 1.3052 -0.0967141 0.678064 0.289548 0.289794C0.677818 -0.0964679 1.305 -0.0964679 1.69322 0.289794Z" fill="#DA9000"></path>
+              </svg>
+            </a>
+          </div>
+          <!-- <div class="m-head m-title">title</div>
+          <div class="m-body">
+            <div class="m-text mb-4">content</div>
+            <div class="text-center">
+              <div class="btn btn-orange close-modal"></div>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
