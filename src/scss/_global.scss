@@ -426,10 +426,12 @@ h2 {
 .category-item-wrapper{
   display: flex;
 
+  height: 100%;
   border-radius: 30px;
   border: 1px solid #CD5A7E;
   .category-item{
     min-width: 310px;
+    height: 100%;
     border: unset;
   }
   .category-item-descr{
@@ -458,7 +460,7 @@ h2 {
 
   &--tall {
     border-radius: 30px;
-    height: 449px;
+    min-height: 449px;
     // width: 310px;
     padding: 30px;
     color: #fff;

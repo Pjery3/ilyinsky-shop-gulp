@@ -22,7 +22,11 @@
     }
 
 }
-
+@media(max-width: 1150px){
+    .category-item-wrapper .category-item{
+        min-width: 250px;
+    }
+}
 @media(max-width: 991px) {
     .top-banner {
         grid-template-columns: repeat(2, 1fr);
@@ -68,6 +72,18 @@
         .btn{
             font-size: 0.8rem;
             text-wrap: nowrap;
+        }
+    }
+
+    .category-item-wrapper{
+        flex-direction: column;
+        .category-item{
+            min-width: 100%;
+            background-position: right 100%;
+            background-size: 40%;
+            &--tall{
+                min-height: auto;
+            }
         }
     }
 }
