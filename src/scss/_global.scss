@@ -427,10 +427,15 @@ h2 {
   display: flex;
 
   border-radius: 30px;
+<<<<<<< HEAD
   border: 1px solid #CD5A7E;
   .category-item{
     min-width: 310px;
     border: unset;
+=======
+  .category-item{
+    min-width: 310px;
+>>>>>>> 2b4b69065bbda0f0fed8d96d32b0b6e400534636
   }
   .category-item-descr{
     @include flex(flex, start, space-between);
