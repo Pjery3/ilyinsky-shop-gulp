@@ -428,11 +428,22 @@ h2 {
 
   height: 100%;
   border-radius: 30px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4867807c0076838d24f6d3572d3976cf3a699c49
   border: 1px solid #CD5A7E;
   .category-item{
     min-width: 310px;
     height: 100%;
     border: unset;
+<<<<<<< HEAD
+=======
+=======
+  .category-item{
+    min-width: 310px;
+>>>>>>> 2b4b69065bbda0f0fed8d96d32b0b6e400534636
+>>>>>>> 4867807c0076838d24f6d3572d3976cf3a699c49
   }
   .category-item-descr{
     @include flex(flex, start, space-between);
