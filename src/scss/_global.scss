@@ -31,6 +31,11 @@ $background-red: rgba(255, 89, 77, 1);
 $background-peach: rgba(255, 166, 138, 1);
 $background-category-yellow: rgba(255, 196, 37, 1);
 
+$background-light-pink: rgba(255, 226, 235, 1);
+$background-light-red: rgba(255, 233, 232, 1);
+$background-light-peach: rgba(255, 237, 232, 1);
+$background-light-yellow: rgba(255, 251, 239, 1);
+
 
 $border-green: rgba(204, 224, 160, 1);
 $border-brown: rgba(255, 231, 185, 1);
@@ -405,8 +410,35 @@ h2 {
     }
   }
 }
-
+.--bg-pink{
+  background-color: $background-light-pink;
+}
+.--bg-red{
+  background-color: $background-light-red;
+}
+.--bg-peach{
+  background-color: $background-light-peach;
+}
+.--bg-yellow{
+  background-color: $background-light-yellow;
+}
 // category-item
+.category-item-wrapper{
+  display: flex;
+
+  border-radius: 30px;
+  border: 1px solid #CD5A7E;
+  .category-item{
+    min-width: 310px;
+    border: unset;
+  }
+  .category-item-descr{
+    @include flex(flex, start, space-between);
+    flex-direction: column;
+
+    padding: 30px;
+  }
+}
 .category-item {
   padding: 35px;
   background-repeat: no-repeat;
