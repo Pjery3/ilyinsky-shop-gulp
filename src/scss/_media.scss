@@ -20,7 +20,9 @@
     .header__delivery-method {
         margin-left: auto;
     }
-
+    html {
+        font-size: 18px;
+    }
 }
 @media(max-width: 1150px){
     .category-item-wrapper .category-item{
@@ -28,6 +30,9 @@
     }
 }
 @media(max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
     .top-banner {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -158,6 +163,10 @@
     .filter-buttons{
         gap: 5px;
     }
+
+    .vacancy-item{
+        min-height: 195px;
+    }
 }
 
 @media(max-width: 676px) {
@@ -251,6 +260,9 @@
         height: 210px;
         background-size: 60%;
         background-position: right 100%;
+    }
+    .vacancy-item{
+        min-height: 170px;
     }
 }
 

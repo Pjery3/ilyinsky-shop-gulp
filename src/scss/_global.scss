@@ -47,6 +47,42 @@ $btn-size: 1rem;
 
 // 
 
+.--bg-pink {
+  background-color: $background-light-pink;
+}
+
+.--bg-red {
+  background-color: $background-light-red;
+}
+
+.--bg-peach {
+  background-color: $background-light-peach;
+}
+
+.--bg-yellow {
+  background-color: $background-light-yellow;
+}
+
+.--item-light-green {
+  border-color: rgba(192, 220, 157, 1);
+  background-color: rgba(242, 249, 233, 1);
+}
+
+.--item-yellow {
+  border-color: rgba(255, 196, 37, 1);
+  background-color: rgba(255, 251, 239, 1);
+}
+
+.--item-blue {
+  border-color: rgba(194, 222, 255, 1);
+  background-color: rgba(237, 245, 255, 1);
+}
+
+.--item-red {
+  border-color: rgba(255, 89, 77, 1);
+  background-color: rgba(255, 233, 232, 1);
+}
+
 //у всех элементов при выделении будет синий цвет
 *,
 *::before,
@@ -247,6 +283,18 @@ h2 {
     color: $border-gray;
   }
 
+  &-black {
+    &--border {
+      border-color: #000;
+      color: #000;
+    }
+
+    &--bg {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
   &-white {
     &--border {
       border-color: #fff;
@@ -410,37 +458,29 @@ h2 {
     }
   }
 }
-.--bg-pink{
-  background-color: $background-light-pink;
-}
-.--bg-red{
-  background-color: $background-light-red;
-}
-.--bg-peach{
-  background-color: $background-light-peach;
-}
-.--bg-yellow{
-  background-color: $background-light-yellow;
-}
+
 // category-item
-.category-item-wrapper{
+.category-item-wrapper {
   display: flex;
 
   height: 100%;
   border-radius: 30px;
   border: 1px solid #CD5A7E;
-  .category-item{
+
+  .category-item {
     min-width: 310px;
     height: 100%;
     border: unset;
   }
-  .category-item-descr{
+
+  .category-item-descr {
     @include flex(flex, start, space-between);
     flex-direction: column;
 
     padding: 30px;
   }
 }
+
 .category-item {
   padding: 35px;
   background-repeat: no-repeat;
@@ -895,6 +935,35 @@ h2 {
     }
   }
 }
+
+// vacancy item
+.vacancy-item {
+  @include flex(flex, start, normal);
+  flex-direction: column;
+  height: 100%;
+  min-height: 255px;
+
+  background-position: 100% 30%;
+  background-size: auto 103px;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 25px 65px 25px 20px;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: unset;
+    margin-bottom: 0.75rem;
+  }
+  &__btn{
+    margin-top: auto;
+  }
+}
+
+
+// 
 
 .modal-link {
   cursor: pointer;
